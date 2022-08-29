@@ -1,198 +1,229 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <link rel="stylesheet" href="style.css">
-     
-   
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
     <div class="container">
-        <header>Monnit Registration</header>
+      <header>Monnit Bank Registration</header>
 
-        <form action="#">
-            <div class="form first">
-                <div class="details personal">
-                    <span class="title">Personal Details</span>
+      <!-- -------------------  FIRST FORM ----------------->
+      <form action="/thankyou.html" method="get" id="myForm">
+        <div class="form first">
+          <div class="details personal">
+            <span class="title">Personal Details</span>
 
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>Full Name</label>
-                            <input type="text" placeholder="Enter your name" required>
-                        </div>
+            <div class="fields">
+              <div class="input-field">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" required />
+              </div>
 
-                        <div class="input-field">
-                            <label>Date of Birth</label>
-                            <input type="date" placeholder="Enter birth date" required>
-                        </div>
+              <div class="input-field">
+                <label>Date of Birth</label>
+                <input type="date" placeholder="Enter birth date" required />
+              </div>
 
-                        <div class="input-field">
-                            <label>Email</label>
-                            <input type="text" placeholder="Enter your email" required>
-                        </div>
+              <div class="input-field">
+                <label>Email</label>
+                <input type="text" placeholder="Enter your email" required />
+              </div>
 
-                        <div class="input-field">
-                            <label>Mobile Number</label>
-                            <input onkeydown="phoneNumberFormatter()" id="phone-number" placeholder="Enter mobile number" required>
-                        </div>
+              <div class="input-field">
+                <label>Mobile Number</label>
+                <input
+                  onkeydown="phoneNumberFormatter()"
+                  id="phone-number"
+                  placeholder="Enter mobile number"
+                  required
+                />
+              </div>
 
-                        <div class="input-field">
-                            <label>Gender</label>
-                            <select required>
-                                <option disabled selected>Select gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Non Binary</option>
-                                <option>Prefer Not to Say</option>
+              <div class="input-field">
+                <label>Gender</label>
+                <select required>
+                  <option disabled selected>Select gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Non Binary</option>
+                  <option>Prefer Not to Say</option>
+                </select>
+              </div>
 
-                            </select>
-                        </div>
+              <div class="input-field">
+                <label>Occupation</label>
+                <input
+                  type="text"
+                  placeholder="Enter your ccupation"
+                  required
+                />
+              </div>
+            </div>
+          </div>
 
-                        <div class="input-field">
-                            <label>Occupation</label>
-                            <input type="text" placeholder="Enter your ccupation" required>
-                        </div>
-                    </div>
-                </div>
+          <div class="details ID">
+            <span class="title">Identification</span>
 
-                <div class="details ID">
-                    <span class="title">Location</span>
+            <div class="fields">
+              <div class="input-field">
+                <label>Social Security Number #</label>
+                <input
+                  onkeydown="socialNumberFormatter()"
+                  id="social-number"
+                  placeholder="Enter Social"
+                  required
+                />
+              </div>
 
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>ID Type</label>
-                            <input type="text" placeholder="Enter ID type" required>
-                        </div>
+              <div class="input-field">
+                <label>Drivers Licence #</label>
+                <input type="number" placeholder="Enter ID number" required />
+              </div>
 
-                        <div class="input-field">
-                            <label>Drivers Licence #</label>
-                            <input type="number" placeholder="Enter ID number" required>
-                        </div>
+              <div class="input-field">
+                <label>Age</label>
+                <input type="number" placeholder="Enter age" required />
+              </div>
 
-                        <div class="input-field">
-                            <label>Issued Authority</label>
-                            <input type="text" placeholder="Enter issued authority" required>
-                        </div>
+              <div class="input-field">
+                <label>Issued State</label>
+                <select id="autocomplete-input" required>
+                  <option disabled selected>Select state</option>
+                  <option>Colorado</option>
+                  <option>Utah</option>
+                  <option>Arizona</option>
+                  <option>New Mexico</option>
+                  <option>Texas</option>
+                  <option>Montana</option>
+                  <option>Idaho</option>
+                  <option>California</option>
+                  <option>Washington</option>
+                  <option>Oregon</option>
+                </select>
+              </div>
 
-                        <div class="input-field">
-                            <label>Issued State</label>
-                            <input type="text" placeholder="Enter state" required>
-                        </div>
+              <div class="input-field">
+                <label>Issued Date</label>
+                <input
+                  type="date"
+                  placeholder="Enter your issued date"
+                  required
+                />
+              </div>
 
-                        <div class="input-field">
-                            <label>Issued Date</label>
-                            <input type="date" placeholder="Enter your issued date" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Expiry Date</label>
-                            <input type="date" placeholder="Enter expiry date" required>
-                        </div>
-                    </div>
-
-                    <button class="nextBtn">
-                        <span class="btnText">Next</span>
-                        <i class="uil uil-navigator"></i>
-                    </button>
-                </div> 
+              <div class="input-field">
+                <label>Expiry Date</label>
+                <input type="date" placeholder="Enter expiry date" required />
+              </div>
             </div>
 
-            <div class="form second">
-                <div class="details address">
-                    <span class="title">Address Details</span>
+            <button class="nextBtn">
+              <span class="btnText">Next</span>
+            </button>
+          </div>
+        </div>
 
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>Address Type</label>
-                            <input type="text" placeholder="Permanent or Temporary" required>
-                        </div>
+        <!-- --------------   SECOND FORM  --------------- -->
 
-                        <div class="input-field">
-                            <label>Nationality</label>
-                            <input type="text" placeholder="Enter nationality" required>
-                        </div>
+        <div class="form second">
+          <div class="details address">
+            <span class="title">Address Details</span>
 
-                        <div class="input-field">
-                            <label>State</label>
-                            <input type="text" placeholder="Enter your state" required>
-                        </div>
+            <div class="fields">
+              <div class="input-field">
+                <label>Address</label>
+                <input type="text" placeholder="Enter Address" required />
+              </div>
 
-                        <div class="input-field">
-                            <label>District</label>
-                            <input type="text" placeholder="Enter your district" required>
-                        </div>
+              <div class="input-field">
+                <label>city</label>
+                <input type="text" placeholder="Enter City" required />
+              </div>
 
-                        <div class="input-field">
-                            <label>Block Number</label>
-                            <input type="number" placeholder="Enter block number" required>
-                        </div>
+             <div class="input-field">
+                <label>State</label>
+                <select id="autocomplete-input" required>
+                  <option disabled selected>Select state</option>
+                  <option>Colorado</option>
+                  <option>Utah</option>
+                  <option>Arizona</option>
+                  <option>New Mexico</option>
+                  <option>Texas</option>
+                  <option>Montana</option>
+                  <option>Idaho</option>
+                  <option>California</option>
+                  <option>Washington</option>
+                  <option>Oregon</option>
+                </select>
+              </div>
 
-                        <div class="input-field">
-                            <label>Ward Number</label>
-                            <input type="number" placeholder="Enter ward number" required>
-                        </div>
-                    </div>
-                </div>
+              <div class="input-field">
+                <label>District</label>
+                <input type="text" placeholder="Enter your district" required />
+              </div>
 
-                <div class="details family">
-                    <span class="title">Family Details</span>
+              <div class="input-field">
+                <label>Apt #</label>
+                <input type="number" placeholder="Enter apartment number" />
+              </div>
 
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>Father Name</label>
-                            <input type="text" placeholder="Enter father name" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Mother Name</label>
-                            <input type="text" placeholder="Enter mother name" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Grandfather</label>
-                            <input type="text" placeholder="Enter grandfther name" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Spouse Name</label>
-                            <input type="text" placeholder="Enter spouse name" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Father in Law</label>
-                            <input type="text" placeholder="Father in law name" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Mother in Law</label>
-                            <input type="text" placeholder="Mother in law name" required>
-                        </div>
-                    </div>
-
-                    <div class="buttons">
-                        <div class="backBtn">
-                            <i class="uil uil-navigator"></i>
-                            <span class="btnText">Back</span>
-                        </div>
-                        
-                        <button class="sumbit">
-                            <span class="btnText">Submit</span>
-                            <i class="uil uil-navigator"></i>
-                        </button>
-                    </div>
-                </div> 
+              <div class="input-field">
+                <label>zip code</label>
+                <input type="number" placeholder="Enter ward number" required />
+              </div>
             </div>
-        </form>
+          </div>
+
+          <div class="details family">
+            <span class="title">Personality</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label>Zodiac sign</label>
+                <input type="text" placeholder="Enter zodiac sign" required />
+              </div>
+
+              <div class="input-field">
+                <label>Are you Awesome?</label>
+                <div class="check">
+                  <input type="checkbox" value="yes" />
+                  <label> yes</label><br />
+                  <input type="checkbox" value="no" />
+                  <label> no</label>
+                </div>
+              </div>
+
+              <div class="input-field">
+                <label>Favorite Superhero</label>
+                <input type="text" placeholder="Enter superhero" required />
+              </div>
+            </div>
+
+            <div class="buttons">
+              <div class="backBtn">
+                <span class="btnText">Back</span>
+              </div>
+
+              <a href="/thankyou.html">
+                <button class="sumbit">
+                  <span class="btnText">Submit</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
-<script src="script.js"></script>
-    
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

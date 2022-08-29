@@ -151,6 +151,21 @@ form .buttons button , .backBtn{
     margin-right: 14px;
 }
 
+a {
+text-decoration: none;
+}
+.check  {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 1px;
+    
+    align-items: center;
+    justify-content: space-between;
+    width: 6rem;
+}
+
+
+
 @media (max-width: 750px) {
     .container form{
         overflow-y: scroll;
