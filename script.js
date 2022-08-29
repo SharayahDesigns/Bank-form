@@ -60,32 +60,7 @@ function socialNumberFormatter() {
 
 
 
-// ----------------State Formatter----------------------------
 
 
-const inputE1 = docutment.querySelector("#autocomplete-input");
-inputE1.addEventListener("submit",onInputChange);
 
-getStateData();
-let stateNames = [];
 
- function getStateData() {
-  
-  const states = [
-{  name: 'Alaska'},
-{  name: 'Texas'},
-{  name: 'Alabama'},
-{  name: 'Arkansas'},
-{  name: 'Arizona'},
-{  name: 'California'},
-{ name: 'Colorado'},
-  ];
-  return states.name;
- 
-
-}
-console.log(getStateData)
-
-function onInputChange() {
-console.log(inputE1.value)
-}
