@@ -101,7 +101,9 @@ form .fields .input-field{
     padding: 0 15px;
     height: 42px;
     margin: 8px 0;
+
 }
+
 .input-field input :focus,
 .input-field select:focus{
     box-shadow: 0 3px 6px rgba(0,0,0,0.13);
@@ -109,6 +111,7 @@ form .fields .input-field{
 .input-field select,
 .input-field input[type="date"]{
     color: #707070;
+
 }
 .input-field input[type="date"]:valid{
     color: #333;
